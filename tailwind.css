@@ -1,0 +1,125 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --black-10: rgba(27, 29, 30, 0.1);
+  --black-100: rgba(27, 29, 30, 1);
+  --black-40: rgba(27, 29, 30, 0.4);
+  --black-5: rgba(27, 29, 30, 0.05);
+  --black-60: rgba(27, 29, 30, 0.6);
+  --otherblue-100: rgba(112, 181, 255, 1);
+  --otherblue-20: rgba(112, 181, 255, 0.2);
+  --othergreen-100: rgba(121, 212, 94, 1);
+  --othergreen-20: rgba(121, 212, 94, 0.2);
+  --otherorange-100: rgba(255, 175, 104, 1);
+  --otherorange-20: rgba(255, 175, 104, 0.2);
+  --otherpink-100: rgba(244, 136, 154, 1);
+  --otherpink-20: rgba(244, 136, 154, 0.2);
+  --otherpurple-100: rgba(186, 129, 238, 1);
+  --otherpurple-20: rgba(186, 129, 238, 0.2);
+  --otherviolet-100: rgba(73, 40, 253, 1);
+  --otheryellow-100: rgba(246, 230, 131, 1);
+  --paragraph-regular-medium-font-family: "Inter Tight", Helvetica;
+  --paragraph-regular-medium-font-size: 16px;
+  --paragraph-regular-medium-font-style: normal;
+  --paragraph-regular-medium-font-weight: 500;
+  --paragraph-regular-medium-letter-spacing: 0.06400000095367432px;
+  --paragraph-regular-medium-line-height: 140%;
+  --paragraph-small-regular-font-family: "Inter Tight", Helvetica;
+  --paragraph-small-regular-font-size: 14px;
+  --paragraph-small-regular-font-style: normal;
+  --paragraph-small-regular-font-weight: 400;
+  --paragraph-small-regular-letter-spacing: 0.05600000083446503px;
+  --paragraph-small-regular-line-height: 140%;
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-100: rgba(255, 255, 255, 1);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
