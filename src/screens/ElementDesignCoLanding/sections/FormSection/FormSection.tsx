@@ -89,7 +89,15 @@ const FormSection = () => {
           </div>
         </form>
         
-        <Button className="h-12 items-center justify-center gap-4 pl-5 pr-2 py-0 relative flex-[0_0_auto] bg-black rounded-[999px] text-white hover:bg-black-100/90">
+        <Button 
+          onClick={(e) => {
+            e.preventDefault();
+            // Handle form submission here
+            console.log('Form submitted');
+            // You can add form validation and submission logic here
+          }}
+          className="h-12 items-center justify-center gap-4 pl-5 pr-2 py-0 relative flex-[0_0_auto] bg-black rounded-[999px] text-white hover:bg-black-100/90"
+        >
           <span className="[font-family:'Inter_Tight',Helvetica] font-medium text-base tracking-[0] leading-[22.4px] whitespace-nowrap">
             Let&apos;s Collaborate
           </span>

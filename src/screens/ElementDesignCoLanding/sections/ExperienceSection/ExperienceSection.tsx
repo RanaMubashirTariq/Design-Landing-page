@@ -127,7 +127,7 @@ export const ExperienceSection = (): JSX.Element => {
       </motion.div>
 
       <motion.div 
-        className="flex flex-wrap items-center justify-center gap-6 relative w-full max-[810px]:flex-col max-[680px]:gap-4"
+        className="flex  items-center justify-center gap-6 relative w-full max-[810px]:flex-col max-[680px]:gap-4"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.1 }}
@@ -136,18 +136,12 @@ export const ExperienceSection = (): JSX.Element => {
         {stats.map((stat, index) => (
           <React.Fragment key={stat.number}>
             {index > 0 && (
-              <motion.div
-                
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.1 }}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              >
+
                 <Separator
                   orientation="vertical"
                   className="h-[120px] md:block max-[810px]:w-[100%] max-[810px]:h-[2px] rotate-[180deg]"
                 />
-              </motion.div>
+  
             )}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

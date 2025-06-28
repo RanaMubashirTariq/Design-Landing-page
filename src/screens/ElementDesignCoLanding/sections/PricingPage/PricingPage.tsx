@@ -25,7 +25,7 @@ const PricingPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-white">
+    <div className="flex flex-col items-center bg-white pt-24">
       <NavigationSection 
         onAboutUsClick={navigateToAboutUs}
         onServicesClick={navigateToServices}

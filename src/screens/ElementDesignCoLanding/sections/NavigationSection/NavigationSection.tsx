@@ -143,7 +143,7 @@ export const NavigationSection = ({
                     onClick={() => {
                       setClicked(true);
                       // Open contact page in new tab
-                      window.open('/contact', '_blank');
+                      window.open('/#/contact', '_blank');
                     }}
                     className={`transition-all duration-300 transform ${
                       clicked ? "translate-x-2 bg-white text-black" : "bg-black-100 text-white"
@@ -231,7 +231,7 @@ export const NavigationSection = ({
                       onClick={() => {
                         setClicked(true);
                         // Open contact page in new tab
-                        window.open('/contact', '_blank');
+                        window.open('/#/contact', '_blank');
                       }}
                       className={`transition-all duration-300 transform ${
                         clicked ? "translate-x-2 bg-white text-black" : "bg-black-100 text-white"

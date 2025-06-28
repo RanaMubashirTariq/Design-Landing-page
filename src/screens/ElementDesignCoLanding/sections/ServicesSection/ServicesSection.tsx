@@ -157,7 +157,13 @@ export const ServicesSection = (): JSX.Element => {
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                  <Button className="h-12 items-center justify-center gap-4 pl-5 pr-2 py-0 relative flex-[0_0_auto] bg-white-100 rounded-[999px] text-[#1b1d1e] hover:bg-white-100/90">
+                  <Button 
+                    onClick={() => {
+                      // Open contact page in new tab
+                      window.open('/#/contact', '_blank');
+                    }}
+                    className="h-12 items-center justify-center gap-4 pl-5 pr-2 py-0 relative flex-[0_0_auto] bg-white-100 rounded-[999px] text-[#1b1d1e] hover:bg-white-100/90"
+                  >
                     <span className="[font-family:'Inter_Tight',Helvetica] font-medium text-base tracking-[0] leading-[22.4px] whitespace-nowrap">
                       Let&apos;s Collaborate
                     </span>

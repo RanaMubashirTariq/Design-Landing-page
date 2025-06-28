@@ -46,7 +46,7 @@ export const PricingPlanSection = (): JSX.Element => {
 
   return (
     <motion.section 
-      className="flex flex-col items-center gap-16 px-[324px] py-20 w-full flex-[0_0_auto] z-[4] rounded-3xl overflow-hidden relative self-stretch max-[1800px]:px-[200px] max-[1600px]:px-[100px] max-[1500px]:px-[20px] max-[1300px]:py-[60px] max-[800px]:py-[40px] max-[800px]:gap-[20px]"
+      className="flex flex-col items-center gap-16 px-[324px] py-20 w-full flex-[0_0_auto] z-[6] rounded-3xl overflow-hidden relative self-stretch max-[1800px]:px-[200px] max-[1600px]:px-[100px] max-[1500px]:px-[20px] max-[1300px]:py-[60px] max-[800px]:py-[40px] max-[800px]:gap-[20px]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.1 }}
@@ -108,6 +108,10 @@ export const PricingPlanSection = (): JSX.Element => {
                   </div>
 
                   <Button
+                    onClick={() => {
+                      // Open contact page in new tab
+                      window.open('/#/contact', '_blank');
+                    }}
                     variant="outline"
                     className="h-12 justify-center gap-4 pl-5 pr-2 py-0 bg-white-100 rounded-[999px] inline-flex items-center relative border-0 hover:bg-white-100/90"
                   >
