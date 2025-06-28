@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Separator } from "../../../../components/ui/separator";
 import magicStick from "../../../../images/magic-stick--1.svg";
@@ -47,23 +48,57 @@ export const ExperienceSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col items-center gap-[60px] px-[324px] py-20 relative w-full z-[7] rounded-3xl max-[1800px]:px-[150px] max-[1600px]:px-[100px] max-[1500px]:px-[20px] max-[1100px]:px-[20px] max-[1100px]:py-[60px] max-[800px]:py-[40px] max-[800px]:gap-[20px]"> 
-      <div className="flex-col items-start gap-5 flex relative w-full">
-        <h2 className="relative w-full mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-medium text-[#1b1d1e] text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-[1.2] max-[1100px]:text-[36px] max-[810px]:text-[30px]">
+    <motion.section 
+      className="flex flex-col items-center gap-[60px] px-[324px] py-20 relative w-full z-[7] rounded-3xl max-[1800px]:px-[150px] max-[1600px]:px-[100px] max-[1500px]:px-[20px] ] max-[1300px]:py-[60px] max-[800px]:py-[40px] max-[800px]:gap-[20px]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.1 }}
+      transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+    > 
+      <motion.div 
+        className="flex-col items-start gap-5 flex relative w-full"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
+        <motion.h2 
+          className="relative w-full mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-medium text-[#1b1d1e] text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-[1.2] max-[1100px]:text-[36px] max-[810px]:text-[30px]"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
           Craft exceptional, experience-led, and technology-driven design
           strategies that deliver impactful results
-        </h2>
+        </motion.h2>
 
-        <div className="flex flex-wrap items-center justify-center gap-[16px_12px] relative w-full max-[680px]:flex-col">
+        <motion.div 
+          className="flex  items-center justify-center gap-[16px_12px] relative w-full max-[760px]:flex-col"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
           {badges.map((badge, index) => (
             <React.Fragment key={badge.text}>
               {index === 2 && (
-                <div className="relative w-fit [font-family:'Inter_Tight',Helvetica] font-medium text-[#1b1d1e] text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-[1.2] whitespace-nowrap">
+                <motion.div 
+                  className="relative w-fit [font-family:'Inter_Tight',Helvetica] font-medium text-[#1b1d1e] text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-[1.2] whitespace-nowrap"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.1 }}
+                  transition={{ duration: 0.6, delay: 0.5 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
                   &amp;
-                </div>
+                </motion.div>
               )}
-              <div
+              <motion.div
                 className={`inline-flex items-center justify-center gap-3 px-6 py-[7px] relative flex-[0_0_auto] ${badge.bgClass} rounded-[999px]`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
                 {badge.isImage ? (
                   <div className="relative w-10 h-10">
@@ -85,45 +120,66 @@ export const ExperienceSection = (): JSX.Element => {
                 >
                   {badge.text}
                 </div>
-              </div>
+              </motion.div>
             </React.Fragment>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="flex flex-wrap items-center justify-center gap-6 relative w-full max-[810px]:flex-col max-[680px]:gap-4">
+      <motion.div 
+        className="flex flex-wrap items-center justify-center gap-6 relative w-full max-[810px]:flex-col max-[680px]:gap-4"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
         {stats.map((stat, index) => (
           <React.Fragment key={stat.number}>
             {index > 0 && (
-              <Separator
-                orientation="vertical"
-                className="h-[120px] md:block max-[810px]:w-[100%] max-[810px]:h-[1px] rotate-[180deg]"
-              />
+              <motion.div
+                
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              >
+                <Separator
+                  orientation="vertical"
+                  className="h-[120px] md:block max-[810px]:w-[100%] max-[810px]:h-[2px] rotate-[180deg]"
+                />
+              </motion.div>
             )}
-            <Card className="flex-1 border-none shadow-none">
-              <CardContent className="flex flex-col items-center justify-center p-8">
-                <div className="inline-flex flex-col items-start">
-                  <div className="inline-flex items-start gap-3">
-                    <img
-                      className="relative flex-[0_0_auto]"
-                      alt="Plus"
-                      src={plus2}
-                    />
-                    <div className="relative w-fit mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-medium text-[#1b1d1e] text-[80px] md:text-[100px] lg:text-[130px] text-center tracking-[0] leading-[1.2] whitespace-nowrap max-[1100px]:text-[103px] max-[760px]:text-[80px]">
-                      {stat.number}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.7 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              <Card className="flex-1 border-none shadow-none">
+                <CardContent className="flex flex-col items-center justify-center p-8">
+                  <div className="inline-flex flex-col items-start">
+                    <div className="inline-flex items-start gap-3">
+                      <img
+                        className="relative flex-[0_0_auto]"
+                        alt="Plus"
+                        src={plus2}
+                      />
+                      <div className="relative w-fit mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-medium text-[#1b1d1e] text-[80px] md:text-[100px] lg:text-[130px] text-center tracking-[0] leading-[1.2] whitespace-nowrap max-[1100px]:text-[103px] max-[760px]:text-[80px]">
+                        {stat.number}
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center gap-2 px-8 py-0 relative self-stretch w-full">
+                      <div className="relative w-[106px] mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-normal text-[#1b1d1e99] text-base tracking-[0] leading-[22.4px] max-[810px]:w-[100%]">
+                        {stat.description}
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center justify-center gap-2 px-8 py-0 relative self-stretch w-full">
-                    <div className="relative w-[106px] mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-normal text-[#1b1d1e99] text-base tracking-[0] leading-[22.4px] max-[810px]:w-[100%]">
-                      {stat.description}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </motion.div>
           </React.Fragment>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };

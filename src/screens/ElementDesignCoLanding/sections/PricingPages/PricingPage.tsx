@@ -1,9 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { NavigationSection } from "../NavigationSection";
-import { PricingPlanSection } from "../PricingPlanSection";
 import { FooterSection } from "../FooterSection";
+import { PricingPlanSection } from "../PricingPlanSection";
 
 const PricingPage = () => {
   const navigate = useNavigate();
@@ -20,24 +19,24 @@ const PricingPage = () => {
     navigate('/services');
   };
 
-  const navigateToWork = () => {
-    navigate('/work');
+  const navigateToPricing = () => {
+    navigate('/pricing');
   };
 
   return (
-    <div className="flex flex-col items-center bg-white">
+    <div className="flex flex-col items-center bg-white pt-24">
       <NavigationSection 
         onAboutUsClick={navigateToAboutUs}
         onServicesClick={navigateToServices}
-        onWorkClick={navigateToWork}
-        onPricingClick={navigateToHome}
+        onWorkClick={navigateToHome}
+        onPricingClick={navigateToPricing}
       />
-      <PricingPlanSection />
+           <PricingPlanSection />
       <FooterSection 
         onAboutUsClick={navigateToAboutUs}
         onServicesClick={navigateToServices}
-        onWorkClick={navigateToWork}
-        onPricingClick={navigateToHome}
+        onWorkClick={navigateToHome}
+        onPricingClick={navigateToPricing}
       />
     </div>
   );

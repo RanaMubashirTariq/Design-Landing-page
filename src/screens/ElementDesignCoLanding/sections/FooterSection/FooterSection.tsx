@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Separator } from "../../../../components/ui/separator";
 import logo  from "../../../../images/logo.svg"
 import vector3 from "../../../../images/vector-3.svg"
@@ -35,7 +36,13 @@ export const FooterSection = ({
   ];
 
   return (
-    <footer className="flex flex-col items-start gap-2 py-[60px] max-w-[1272px]  relative w-full bg-transparent max-[1500px]:px-[20px] max-[1400px]:py-[60px] max-[800px]:py-[40px] max-[800px]:gap-[20px]">
+    <motion.footer 
+      className="flex flex-col items-center gap-16 px-[324px] py-20 w-full flex-[0_0_auto] z-[3] rounded-3xl overflow-hidden relative self-stretch max-[1800px]:px-[200px] max-[1600px]:px-[100px] max-[1500px]:px-[20px] max-[1300px]:py-[60px] max-[800px]:py-[40px] max-[800px]:gap-[20px]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.1 }}
+      transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+    >
       <div className="flex flex-col items-start gap-[50px] rounded-2xl overflow-hidden w-full max-[865px]:gap-[20px]">
         <Separator className="w-full" />
 
@@ -71,7 +78,7 @@ export const FooterSection = ({
                 Sitemap
               </h3>
 
-              <nav className="flex flex-col items-start gap-4 w-full">
+              <nav className="flex flex-col items-start gap-4 max-[550px]:w-[100px]">
                 {sitemapLinks.map((link, index) => (
                   <a
                     key={index}
@@ -127,6 +134,6 @@ export const FooterSection = ({
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };

@@ -1,11 +1,22 @@
 import { ArrowRightIcon } from "lucide-react";
+import { motion } from "framer-motion";
 import React from "react";
 import { Button } from "../../../../components/ui/button";
 
 const FormSection = () => {
   return (
-    <div className="absolute top-100px flex flex-col items-center justify-center gap-20 w-full px-[324px] py-[80px] relative max-[1800px]:px-[200px] max-[1600px]:px-[100px] max-[1400px]:py-[60px] max-[800px]:py-[40px] max-[1400px]:gap-[20px] max-[1400px]:px-[20px]">
-      <h2 className="w-[373px] relative w-fit mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-normal text-black-100 text-5xl text-center leading-[48px]">
+    <motion.div className="absolute top-100px flex flex-col items-center justify-center gap-20 w-full px-[324px] py-[80px] relative max-[1800px]:px-[200px] max-[1600px]:px-[100px] max-[1400px]:py-[60px] max-[800px]:py-[40px] max-[1400px]:gap-[20px] max-[1400px]:px-[20px]"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false, amount: 0.1 }}
+    transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+    >
+       <motion.h2 className="w-[373px] relative w-fit mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-normal text-black-100 text-5xl text-center leading-[48px]"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.1 }}
+      transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
         <span className="font-medium text-[#1b1d1e] tracking-[-0.23px] leading-[57.6px] max-[800px]:text-[36px]">
           Love to hear from you, <br/>
           Get in 
@@ -16,9 +27,14 @@ const FormSection = () => {
         <span className="[font-family:'Instrument_Serif',Helvetica] italic text-[#1b1d1e] tracking-[0] leading-[57.6px]">
           touch
         </span>
-      </h2>
+      </motion.h2>
 
-      <div className="w-full flex flex-col items-start bg-white rounded-xl p-8 w-full z-10">
+      <motion.div className="w-full flex flex-col items-start bg-white rounded-xl p-8 w-full z-10"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.1 }}
+      transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
         <form className="w-full grid grid-cols-2 gap-4 max-[668px]:grid-cols-1">
           <div className="mb-8">
             <label htmlFor="name" className="block text-gray-700">Your name</label>
@@ -81,8 +97,8 @@ const FormSection = () => {
             <ArrowRightIcon className="w-5 h-5 text-black rotate-[310deg]" />
           </div>
         </Button>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

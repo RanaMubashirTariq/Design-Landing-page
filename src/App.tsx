@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { ElementDesignCoLanding } from "./screens/ElementDesignCoLanding";
 import ContactPage from "./screens/ContactPage/ContactPage";
 import AboutPage from "./screens/ElementDesignCoLanding/sections/AboutUsPage/AboutUsPage";

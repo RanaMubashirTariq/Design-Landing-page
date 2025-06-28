@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -40,21 +41,38 @@ export const FaqSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col items-center gap-20 py-20  w-full z-[2] rounded-3xl max-[1500px]:px-[20px] max-[1400px]:py-[60px] max-[800px]:py-[40px] max-[800px]:gap-[20px]">
-      <h2 className="w-fit mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-normal text-black-100 text-5xl text-center tracking-[-0.48px] leading-[48px] max-[800px]:text-[36px] max-[800px]:leading-[40px]">
-        <span className="font-medium text-[#1b1d1e] tracking-[-0.23px] leading-[57.6px]">
-          Got questions? <br />
-          We&apos;ve got
+    <motion.section 
+      className="flex flex-col items-center gap-16 px-[324px] py-20 w-full flex-[0_0_auto] z-[4] rounded-3xl overflow-hidden relative self-stretch max-[1800px]:px-[200px] max-[1600px]:px-[100px] max-[1500px]:px-[20px] max-[1300px]:py-[60px] max-[800px]:py-[40px] max-[800px]:gap-[20px]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.1 }}
+      transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+    >
+      <motion.h2 
+        className="w-[373px] relative w-fit mt-[-1.00px] [font-family:'Inter_Tight',Helvetica] font-normal text-black-100 text-5xl text-center leading-[48px] "
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
+        <span className=" font-medium text-[#1b1d1e] tracking-[-0.23px] leading-[57.6px] max-[800px]:text-[36px]">
+          Frequently Asked
         </span>
-        <span className="font-medium text-[#1b1d1e] tracking-[-0.23px] leading-[0.1px]">
+        <span className="font-medium text-[#1b1d1e] tracking-[0] leading-[0.1px]">
           &nbsp;
         </span>
-        <span className="[font-family:'Instrument_Serif',Helvetica] italic text-[#1b1d1e] tracking-[-0.23px] leading-[57.6px]">
-          answers
+        <span className="[font-family:'Instrument_Serif',Helvetica] italic text-[#1b1d1e] tracking-[0] leading-[57.6px]">
+          Questions
         </span>
-      </h2>
+      </motion.h2>
 
-      <div className="max-w-[1272px] w-full">
+      <motion.div 
+        className="flex flex-col items-start gap-6 relative w-full"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
         <Accordion type="single" collapsible className="w-full ">
           {faqItems.map((item, index) => (
             <AccordionItem
@@ -64,7 +82,7 @@ export const FaqSection = (): JSX.Element => {
               defaultValue={item.defaultOpen ? `item-${index}` : undefined}
             >
               <AccordionTrigger className="px-6 py-8 hover:no-underline flex items-center justify-between w-full [&>svg]:hidden group">
-                <span className="text-left [font-family:'Inter_Tight',Helvetica] font-medium text-[#1b1d1e] text-2xl tracking-[0] leading-[28.8px]">
+                <span className="text-left [font-family:'Inter_Tight',Helvetica] font-medium text-[#1b1d1e] text-2xl tracking-[0] leading-[28.8px] max-[800px]:text-[18px] max-[800px]:leading-[22.4px]">
                   {item.question}
                 </span>
                 <span>
@@ -73,14 +91,14 @@ export const FaqSection = (): JSX.Element => {
 
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-8">
-                <p className="[font-family:'Inter_Tight',Helvetica] font-normal text-[#1b1d1e99] text-base tracking-[0] leading-[22.4px]">
+                <p className="[font-family:'Inter_Tight',Helvetica] font-normal text-[#1b1d1e99] text-base tracking-[0] leading-[22.4px] max-[800px]:text-[18px] max-[800px]:leading-[22.4px]">
                   {item.answer}
                 </p>
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
