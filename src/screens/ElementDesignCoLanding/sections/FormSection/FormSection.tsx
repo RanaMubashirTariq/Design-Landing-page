@@ -5,7 +5,7 @@ import { Button } from "../../../../components/ui/button";
 
 const FormSection = () => {
   return (
-    <motion.div className="absolute top-100px flex flex-col items-center justify-center gap-20 w-full px-[324px] py-[80px] relative max-[1800px]:px-[200px] max-[1600px]:px-[100px] max-[1400px]:py-[60px] max-[800px]:py-[40px] max-[1400px]:gap-[20px] max-[1400px]:px-[20px]"
+    <motion.div className="absolute top-100px flex flex-col items-center justify-center gap-20 w-full px-[324px] py-[80px] relative max-[1800px]:px-[200px] max-[1600px]:px-[100px] max-[1400px]:py-[60px] max-[800px]:py-[40px] max-[1400px]:gap-[20px] max-[1400px]:px-[150px] max-[1000px]:px-[20px] "
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: false, amount: 0.1 }}
@@ -36,54 +36,54 @@ const FormSection = () => {
       transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
         <form className="w-full grid grid-cols-2 gap-4 max-[668px]:grid-cols-1">
-          <div className="mb-8">
+          <div className="mb-8 max-[680px]:mb-0">
             <label htmlFor="name" className="block text-gray-700">Your name</label>
             <input
               type="text"
               id="name"
               placeholder="Enter your name"
-              className="mt-1 block w-full max-w-[592px] py-[17px] px-[16px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
+              className="mt-1 block w-full max-w-[592px] py-[17px] px-[16px] max-[680px]:py-[10px] max-[680px]:px-[10px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
             />
           </div>
 
-          <div className="mb-8">
+          <div className="mb-8 max-[680px]:mb-0">
             <label htmlFor="email" className="block text-gray-700">Your email</label>
             <input
               type="email"
               id="email"
               placeholder="Enter your email"
-              className="mt-1 block w-full max-w-[592px] py-[17px] px-[16px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
+              className="mt-1 block w-full max-w-[592px] py-[17px] px-[16px] max-[680px]:py-[10px] max-[680px]:px-[10px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
             />
           </div>
 
-          <div className="mb-8">
+          <div className="mb-8 max-[680px]:mb-0">
             <label htmlFor="interest" className="block text-gray-700">What are you interested in?</label>
             <select
               id="interest"
-              className="mt-1 block w-full max-w-[592px] py-[17px] px-[16px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
+              className="mt-1 block w-full max-w-[592px] py-[17px] px-[16px] max-[680px]:py-[10px] max-[680px]:px-[10px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
             >
               <option value="">Design & Branding</option>
               {/* Add more options here as needed */}
             </select>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-8 max-[680px]:mb-0">
             <label htmlFor="budget" className="block text-gray-700">Project budget</label>
             <select
               id="budget"
-              className="mt-1 block w-full max-w-[592px] py-[17px] px-[16px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
+              className="mt-1 block w-full max-w-[592px] py-[17px] px-[16px] max-[680px]:py-[10px] max-[680px]:px-[10px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
             >
               <option value="">Select your budget</option>
               {/* Add more options here as needed */}
-            </select>
+            </select> 
           </div>
 
-          <div className="mb-8 col-span-2 max-[668px]:col-span-1">
+          <div className="mb-8 col-span-2 max-[668px]:col-span-1 max-[680px]:mb-4 ">
             <label htmlFor="message" className="block text-gray-700">Message</label>
             <textarea
               id="message"
               placeholder="Let us know your project about"
-              className="mt-1 block w-full py-[17px] px-[16px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
+              className="mt-1 block w-full py-[17px] px-[16px] max-[680px]:py-[10px] max-[680px]:px-[10px] max-[680px]:py-[10px] max-[680px]:px-[10px] border border-gray-300 rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
               rows={4}
             ></textarea>
           </div>

@@ -11,7 +11,7 @@ import { PortfolioSection } from "./sections/PortfolioSection";
 import { PricingPlanSection } from "./sections/PricingPlanSection";
 import { ReviewsSection } from "./sections/ReviewsSection";
 import { ServicesSection } from "./sections/ServicesSection";
-// import EmptyPage from "./sections/EmptyPage/EmptyPage";
+import EmptyPage from "./sections/EmptyPage/EmptyPage";
 
 export const ElementDesignCoLanding = (): JSX.Element => {
   const navigate = useNavigate();

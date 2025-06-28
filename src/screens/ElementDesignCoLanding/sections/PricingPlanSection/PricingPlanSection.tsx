@@ -119,7 +119,7 @@ export const PricingPlanSection = (): JSX.Element => {
                       Let&apos;s Collaborate
                     </span>
                     <div className="inline-flex items-center gap-2 p-1.5 relative flex-[0_0_auto] bg-black-100 rounded-[999px]">
-                      <ArrowRightIcon className="w-5 h-5 text-white" />
+                      <ArrowRightIcon className="w-5 h-5 text-white rotate-[310deg]" />
                     </div>
                   </Button>
                 </div>

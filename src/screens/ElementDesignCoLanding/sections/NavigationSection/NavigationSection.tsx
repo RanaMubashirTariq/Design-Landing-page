@@ -101,7 +101,7 @@ export const NavigationSection = ({
               onClick={() => setMenuOpen(false)}
             >
               <motion.nav 
-                className="absolute top-0 left-0 w-[240px] bg-white shadow-lg flex flex-col items-center gap-2 py-4 z-50"
+                className="absolute top-0 left-0 w-[240px] rounded-xl shadow-[0px_1px_2px_#0000000f,0px_1px_3px_#0000001a] bg-white shadow-lg flex flex-col items-center gap-2 py-4 z-50"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
